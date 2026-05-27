@@ -51,4 +51,6 @@ A respota obtida foi satisfatória sendo precisamente acertiva por parte da IA u
 
 Sinto que a utilização da IA foi benéfica por auxiliar tanto no aprendizado quanto como um auxiliador durante todo o desenvolvimento do projeto, levando em consideração que toda a utilização sempre foi para aprimorar conhecimentos intelectual e técnico.
 
+### Cauã
+
 ---
