@@ -43,7 +43,9 @@ O projeto foi desenvolvido utilizando Google Colab com suporte a GPU NVIDIA Tesl
 
 ### Abrir Notebook
 
-https://colab.research.google.com/github/Marcos-ant19/Projeto/blob/main/codigo/cpu&gpu.ipynb
+## Abrir no Google Colab
+
+[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Marcos-ant19/Projeto/blob/main/codigo/cpu&gpu.ipynb)
 ---
 
 ## Configuração do Ambiente
