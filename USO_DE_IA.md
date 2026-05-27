@@ -51,7 +51,7 @@ A respota obtida foi satisfatória sendo precisamente acertiva por parte da IA u
 
 Sinto que a utilização da IA foi benéfica por auxiliar tanto no aprendizado quanto como um auxiliador durante todo o desenvolvimento do projeto, levando em consideração que toda a utilização sempre foi para aprimorar conhecimentos intelectual e técnico.
 
-### Jurcelino
+### Jurcelino Castilho Dos Santos Neto
 
 A utilização da ia foi benéficiente, ajudando a corrigir os erros cometidos por mim, porém por uma parte foi mais prolongada por não ter gerado um codigo completo, sendo assim tive que corrigir cerca de 55% manualmente, mais ajudou a chegar no exato da execução.
 
