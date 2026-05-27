@@ -51,6 +51,52 @@ A respota obtida foi satisfatória sendo precisamente acertiva por parte da IA u
 
 Sinto que a utilização da IA foi benéfica por auxiliar tanto no aprendizado quanto como um auxiliador durante todo o desenvolvimento do projeto, levando em consideração que toda a utilização sempre foi para aprimorar conhecimentos intelectual e técnico.
 
+### Jurcelino
+
+A utilização da ia foi benéficiente, ajudando a corrigir os erros cometidos por mim, porém por uma parte foi mais prolongada por não ter gerado um codigo completo, sendo assim tive que corrigir cerca de 55% manualmente, mais ajudou a chegar no exato da execução.
+
 ### Cauã
 
 ---
+
+# Uso de Inteligência Artificial
+
+o uso da IA foi em questão para auxilio, foi utilizada para auxiliar e corrigir codigos da CUDA.
+
+## Ferramentas utilizadas
+
+- NotebookLM
+- ChatGPT (pro)
+
+## Etapas do uso da IA
+
+- Primeiramente utilizei a IA para apredizando inicial para entender o contéudo proposto no trabalho
+- Utilizei para geração do código
+- Explicação do código e correção do próprio
+- Utilizei para ajudar na criação dos gráficos da gpu
+
+## Exemplos de prompts utilizandos
+
+### prompt 1
+
+"faça a programação em linguagem c de modo que, a estrutura CUDA (fases 1-3 do widget) e portar o SHA-256 para device, fazendo o kernel funcionar no Colab."
+
+### Resposta obtida
+
+"Para implementar o SHA-256 em CUDA no Google Colab seguindo as fases de estrutura solicitadas, é necessário transformar as funções sequenciais do algoritmo em funções de dispositivo (__device__) e gerenciar a execução massivamente paralela através do kernel." Logo em seguida me gerou um codigo incompleto.
+
+### Análise crítica 
+
+A resposta foi útil e aproveitada, porém o codigo havia gerado incompleto, então diante daquilo tive que pedir informações e ajuda ao ChatGPT na versão PRO para me auxiliar na construção do codigo, e fiz 55% manualmente.
+
+### prompt 2
+
+"utilize essa chave no codigo: const char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789";" e logo depois mandei meu codigo.
+
+### Resposta obtida
+
+A IA me deu uma linha de substituição onde eu apenas tive que trocar dentro do meu proprio codigo.
+
+### Análise crítica 
+
+A respota obtida foi acertada e utilizada no google colab sendo precisamente acertiva por parte da IA utilizada.
