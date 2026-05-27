@@ -79,7 +79,7 @@ o uso da IA foi em questão para auxilio, foi utilizada para auxiliar e corrigir
 
 ### prompt 1
 
-"faça a programação em linguagem c de modo que, a estrutura CUDA (fases 1-3 do widget) e portar o SHA-256 para device, fazendo o kernel funcionar no Colab."
+"Aja como um especialista em programação massivamente paralela e escreva um código em C/CUDA para um motor de busca por força bruta de hashes SHA-256, seguindo rigorosamente as definições do relatório técnico 'Otimização da Busca por Força Bruta de Pré-Imagens'. O código deve ser compatível com o Google Colab"
 
 ### Resposta obtida
 
@@ -91,7 +91,12 @@ A resposta foi útil e aproveitada, porém o codigo havia gerado incompleto, ent
 
 ### prompt 2
 
-"utilize essa chave no codigo: const char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789";" e logo depois mandei meu codigo.
+"Com base na estrutura de código definida anteriormente, aplique as seguintes especificações detalhadas:
+Definição do Charset: Utilize exatamente a chave const char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789"; (36 caracteres) para a busca:
+ - Otimização de Memória: Declare este charset utilizando o especificador __constant__ da GPU. Conforme as boas práticas acadêmicas de CUDA, isso garante que o acesso aos caracteres seja feito via cache de constante, otimizando o broadcast para todas as threads de um warp que estão gerando candidatos simultaneamente.
+-  Lógica de Geração de Senhas: Implemente a função de dispositivo password_generator de modo que ela converta o índice global da thread em uma string baseada na base 36 (tamanho do seu charset). Garanta que a função trate corretamente o mapeamento para comprimentos de 4 a 6 caracteres.
+ - Sincronização de Símbolos: No código do Host (CPU), utilize a função cudaMemcpyToSymbol para copiar o charset definido na CPU para a memória constante da GPU antes do lançamento do kernel.
+- Critério de Sucesso: O código deve imprimir a senha encontrada e o hash original no console assim que a found_flag for ativada por qualquer thread."
 
 ### Resposta obtida
 
