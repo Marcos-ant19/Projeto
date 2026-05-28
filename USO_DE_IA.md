@@ -55,7 +55,99 @@ Sinto que a utilização da IA foi benéfica por auxiliar tanto no aprendizado q
 
 A utilização da ia foi benéficiente, ajudando a corrigir os erros cometidos por mim, porém por uma parte foi mais prolongada por não ter gerado um codigo completo, sendo assim tive que corrigir cerca de 55% manualmente, mais ajudou a chegar no exato da execução.
 
-### Cauã
+### Cauã Azevedo Santos
+
+A utilização de inteligência artificial durante o meu desenvolvimento no trabalho ocorreu nas seguintes etapas:
+
+1. **Planejamento e Direcionamento Inicial:** A IA foi utilizada para dar um rumo inicial sobre o que o trabalho exigia e também para auxiliar na separação das tarefas e do que cada integrante da equipe deveria fazer.
+2. **Estudo da Base Teórica:** Usei a IA para estudar e compreender melhor a base teórica e os conceitos do projeto.
+3. **Pesquisa de Referências:** Embora o professor já tivesse deixado sugestões de referências, foi necessário buscar mais materiais para fortalecer a argumentação. Utilizei o **Claude** para pesquisar e encontrar mais 5 referências concretas (as quais foram posteriormente verificadas por mim).
+4. **Análise de Citações e Documentos:** Com as novas referências em mãos, utilizei o **NotebookLM** para estudar os documentos e planejar o que poderia ser efetivamente citado no relatório.
+5. **Escrita do Relatório:** Quando meus tokens do Claude acabaram e faltava apenas a etapa de escrita, utilizei a IDE agêntica do Google (**Antigravity**), configurada com o modelo da Anthropic. Nela, utilizei skills de escrita e inseri as referências em um arquivo `.md`. Criei regras e um fluxo rigoroso para que a IA utilizasse **somente** as referências que eu havia fornecido. Passei todo o contexto do trabalho e do diretório em que eu estava operando, delimitando ao máximo o escopo. Assim, a escrita foi dividida seção por seção, sendo que em cada etapa eu fui revisando e ajustando manualmente certos pontos gerados.
+
+#### Exemplos de prompts utilizados por Cauã
+
+**Prompt 1 (Roteiro Inicial de Estudos):**
+
+> **Contexto:**
+> Tenho um trabalho acadêmico/técnico extenso envolvendo CUDA e não sei por onde começar.
+> 
+> **O que preciso:**
+> - Uma explicação introdutória sobre o que é CUDA, o que é, para que serve e por que é relevante
+> - Um roteiro estruturado de estudos, do básico ao necessário para executar o trabalho
+> - Um plano de ação claro, com etapas sequenciais e priorizadas para eu não me perder
+> 
+> **Meu nível atual:**
+> Sou iniciante no assunto, nunca estudei CUDA antes e ainda preciso entender o escopo completo do trabalho. E sei um pouco de C.
+> 
+> **O que espero como resposta:**
+> - Uma trilha de aprendizado lógica e progressiva
+> - Indicação do que estudar primeiro, segundo e assim por diante
+> - Dicas de onde encontrar recursos confiáveis (documentação, tutoriais, etc.)
+> - Alertas sobre os pontos mais difíceis ou que exigem mais atenção
+> 
+> ⚠️ Assim que eu compartilhar o enunciado do trabalho, me ajude também a identificar exatamente o que ele está pedindo e como mapear isso ao que estudei.
+
+**Prompt 2 (Instrução para Agente de IA - Escrita do Artigo):**
+
+> # Instruções para o Agente de IA: Escrita do Artigo Científico (SBC)
+> 
+> Você é um agente de IA atuando como pesquisador e coautor encarregado de escrever um artigo científico rigoroso sobre "Força bruta de hash criptográfico (SHA-256)" acelerado por GPU (CUDA). O artigo é o Trabalho Final da disciplina de Arquitetura de Computadores.
+> 
+> ## Seu Objetivo
+> Seu principal objetivo é redigir o artigo acadêmico diretamente no arquivo LaTeX `main.tex` que se encontra dentro da pasta `Overleaf`, seguindo rigorosamente a formatação do template da Sociedade Brasileira de Computação (SBC).
+> 
+> ## Contexto do Trabalho
+> - **Disciplina:** Arquitetura de Computadores.
+> - **Tema (Trio 6):** Força bruta de hash criptográfico (SHA-256). Implementação de busca por força bruta de pré-imagens curtas (4–6 caracteres) para SHA-256 em CPU (sequencial) e CUDA (paralelo).
+> - **Objetivos Chave:** Demonstrar como o modelo SIMT (Single Instruction, Multiple Threads) favorece a exploração massiva de espaços de busca; calcular speedup, eficiência; comparar desempenho; discutir restrições éticas e implicações de segurança.
+> - **Autores/Integrantes:** Cauã Azevedo Santos, Jurcelino Castilho dos Santos Neto, Marcos Antonio do Nascimento.
+> 
+> ## Seu Workflow (Como você deve proceder)
+> 
+> 1. **Análise de Referências e Literatura:**
+>    - Leia os arquivos de referências no diretório raiz (ex: `referencias_grupo6.md` e/ou `referencias_grupo6_v2.md`).
+>    - **REGRA DE OURO:** Baseie a fundamentação teórica e trabalhos relacionados **exclusivamente** nesses arquivos. Não adicione citações ou referências não fornecidas. Isso é crucial para evitar alucinações.
+> 
+> 2. **Análise do Código e Resultados (Obrigatório e Fundamental):**
+>    - Inspecione detalhadamente a pasta `projeto_new`. É lá que se encontra todo o nosso código (CPU e CUDA), scripts, e principalmente os **resultados dos benchmarks e gráficos**.
+>    - Ao escrever o artigo, você **deve referenciar e basear a discussão nestes arquivos reais**. A seção de *Metodologia*, *Implementação* e *Resultados e Discussão* precisa ser fortemente embasada no que foi de fato executado.
+> 
+> 3. **Escrita no Overleaf:**
+>    - Acesse o diretório `Overleaf` e escreva o conteúdo no arquivo `main.tex`.
+>    - Utilize a skill humanizer.
+> 
+> ## Estrutura Exigida do Relatório (Template SBC)
+> O seu texto final em `main.tex` deve contemplar obrigatoriamente as seguintes seções:
+> 1. **Resumo / Abstract:** (Português e Inglês, máx. 150 palavras cada).
+> 2. **Introdução:** Contexto, motivação, problema, objetivos e organização do texto.
+> 3. **Fundamentação Teórica:** Paralelismo (taxonomia de Flynn), arquitetura SIMT, hierarquia de memória em GPUs, CUDA (threads/blocos/grids), Lei de Amdahl/Gustafson e criptografia/SHA-256.
+> 4. **Trabalhos Relacionados:** Usar estritamente o conteúdo dos arquivos de referências.
+> 5. **Metodologia:** Descrição do problema, ambiente experimental (Google Colab), métricas, configurações (blocos/threads), tamanhos de entrada.
+> 6. **Implementação:** Trechos comentados das kernels, decisões de projeto, otimizações aplicadas. Descrever a versão CPU e a versão CUDA. (Pegue os dados da pasta `projeto_new`).
+> 7. **Resultados e Discussão:** Gráficos e tabelas comparando tempo CPU vs GPU, speedup e eficiência, análise de gargalos. Relacionar teoria e prática. (Use os dados empíricos de `projeto_new`).
+> 8. **Conclusões e Trabalhos Futuros:** Resumo dos achados e considerações éticas/de segurança.
+> 9. **Referências:** Referenciar os materiais lidos.
+> 
+> ## Restrições Críticas
+> - **NÃO ALUCINE RESULTADOS.** Use apenas os dados da pasta `projeto_new`.
+> - **NÃO ALUCINE REFERÊNCIAS.** Use apenas o que foi fornecido nos arquivos `referencias_grupo6`.
+> - Foque na escrita do documento LaTeX (`main.tex`). Use formatação correta para tabelas, equações e imagens no LaTeX.
+> - **TRADUÇÃO DE CITAÇÕES:** Sempre que citar trechos extraídos das referências em inglês, traduza-os de forma clara e acadêmica para o português no texto do artigo. Não mantenha citações diretas em inglês no meio do texto em português.
+> 
+> ## ORÇAMENTO DE PÁGINAS (CRÍTICO)
+> - **LIMITE TOTAL:** 10 páginas. Sem exceção.
+> - **Páginas já consumidas:** ~6 páginas (Resumo/Abstract + Introdução + Fundamentação Teórica + Trabalhos Relacionados).
+> - **Páginas restantes:** ~4 páginas para Metodologia + Implementação + Resultados e Discussão + Conclusões + Referências.
+> - **REGRA:** Cada seção restante deve ocupar no máximo 1 página. A seção de Referências ocupa cerca de 0,5 página.
+> - **COMO ECONOMIZAR ESPAÇO:** Prefira tabelas compactas a parágrafos descritivos. Não repita informações já ditas na Fundamentação. Elimine frases introdutórias genéricas. Vá direto ao ponto. Use `\small` em tabelas e listagens de código se necessário.
+> - **PROIBIDO:** Ultrapassar 10 páginas. Se o texto estiver chegando perto do limite, corte explicações secundárias e mantenha apenas dados, métricas e análise.
+
+#### Análise Crítica
+
+No geral, a IA funcionou bem. Dar bastante contexto nos prompts e delimitar o escopo fez com que as respostas viessem mais precisas, quando eu era vago, a resposta vinha genérica. Usar *skills* de escrita na IDE também ajudou a manter o texto dentro do que eu queria, sem a IA inventar referência.
+
+Um ponto que ficou claro: a IA acelera o trabalho, mas só se você já sabe o que quer. Eu tive que revisar e ajustar cada seção que ela gerou. Se alguém só joga o enunciado no chat e aceita tudo sem ler, o resultado sai fraco e a pessoa não aprende nada no processo.
 
 ---
 
@@ -104,4 +196,4 @@ A IA me deu uma linha de substituição onde eu apenas tive que trocar dentro do
 
 ### Análise crítica 
 
-A respota obtida foi acertada e utilizada no google colab sendo precisamente acertiva por parte da IA utilizada.
+A resposta funcionou direto — colei as substituições no código e rodou no Colab sem problemas.
